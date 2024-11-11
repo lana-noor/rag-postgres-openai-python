@@ -71,11 +71,11 @@ class RetrievalResponseDelta(BaseModel):
 
 class ItemPublic(BaseModel):
     id: int
-    type: str
-    brand: str
-    name: str
-    description: str
-    price: float
+    document_title: str
+    page_number: int
+    document_date: str
+    document_category: str
+    content: str
 
 
 class ItemWithDistance(ItemPublic):
