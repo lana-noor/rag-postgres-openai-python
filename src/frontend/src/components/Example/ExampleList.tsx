@@ -3,9 +3,9 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "Best shoe for hiking?",
-    "Climbing gear cheaper than $30?",
-    "Waterproof camping gear?",
+    "What are the latest financial results for FAB?",
+    "Show me information on FAB's ESG initiatives.",
+    "Details on non-trading investment securities as of September 30, 2024?",
 ];
 
 interface Props {

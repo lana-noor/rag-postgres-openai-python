@@ -67,10 +67,11 @@ export const Answer = ({
                             if (!citation) return null;
                             return (
                                 <li key={rowId}>
-                                    <h4>{citation.name}</h4>
-                                    <p className={styles.referenceMetadata}>Brand: {citation.brand}</p>
-                                    <p className={styles.referenceMetadata}>Price: {citation.price}</p>
-                                    <p>{citation.description}</p>
+                                    <h4>{citation.document_title}</h4>
+                                    <p className={styles.referenceMetadata}>Date: {citation.document_date}</p>
+                                    <p className={styles.referenceMetadata}>Category: {citation.document_category}</p>
+                                    <p>Page Number: {citation.page_number}</p>
+                                    <p>{citation.content}</p>
                                 </li>
                             );
                         })}
