@@ -43,7 +43,6 @@ async def seed_data(engine):
                     continue
                 attrs = {key: value for key, value in seed_data_object.items()}
                 attrs["embedding_ada002"] = np.array(seed_data_object["embedding_ada002"])
-                attrs["embedding_nomic"] = np.array(seed_data_object["embedding_nomic"])
                 column_names = ", ".join(attrs.keys())
                 values = ", ".join([f":{key}" for key in attrs.keys()])
                 await session.execute(text(f"INSERT INTO {table_name} ({column_names}) VALUES ({values})"), attrs)

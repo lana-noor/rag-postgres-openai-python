@@ -72,8 +72,8 @@
                     }
                 ],
                 "props": {
-                    "model": "gpt-4o-mini",
-                    "deployment": "gpt-4o-mini"
+                    "model": "gpt-4o",
+                    "deployment": "gpt-4o"
                 }
             },
             {
@@ -113,8 +113,8 @@
                     }
                 ],
                 "props": {
-                    "model": "gpt-4o-mini",
-                    "deployment": "gpt-4o-mini"
+                    "model": "gpt-4o",
+                    "deployment": "gpt-4o"
                 }
             }
         ],
