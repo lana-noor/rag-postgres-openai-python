@@ -39,7 +39,7 @@
         "value": "${AZURE_OPENAI_CHAT_DEPLOYMENT=gpt-4o}"
       },
       "chatDeploymentVersion":{
-        "value": "${AZURE_OPENAI_CHAT_DEPLOYMENT_VERSION=2024-07-18}"
+        "value": "${AZURE_OPENAI_CHAT_DEPLOYMENT_VERSION=2024-05-13}"
       },
       "chatDeploymentSku": {
         "value": "${AZURE_OPENAI_CHAT_DEPLOYMENT_SKU=GlobalStandard}"
