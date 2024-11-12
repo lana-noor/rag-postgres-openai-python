@@ -23,15 +23,10 @@ async def update_embeddings(in_seed_data=False):
     openai_embed_client = await create_openai_embed_client(azure_credential)
     common_params = await common_parameters()
 
-    embedding_column = ""
-    OPENAI_EMBED_HOST = os.getenv("OPENAI_EMBED_HOST")
-    if OPENAI_EMBED_HOST == "azure":
-        embedding_column = os.getenv("AZURE_OPENAI_EMBEDDING_COLUMN", "embedding_ada002")
-    elif OPENAI_EMBED_HOST == "ollama":
-        embedding_column = os.getenv("OLLAMA_EMBEDDING_COLUMN", "embedding_nomic")
-    else:
-        embedding_column = os.getenv("OPENAICOM_EMBEDDING_COLUMN", "embedding_ada002")
+    # Set the embedding column to 'embedding_ada002' directly since 'embedding_nomic' is not used
+    embedding_column = "embedding_ada002"
     logger.info(f"Updating embeddings in column: {embedding_column}")
+
     if in_seed_data:
         current_dir = os.path.dirname(os.path.realpath(__file__))
         rows = []
