@@ -17,7 +17,7 @@ class ChatUser(HttpUser):
                 "messages": [
                     {
                         "content": random.choice(
-                            ["Best shoe for hiking?", "Climbing shoe cheaper than $30?", "Waterproof camping gear?"]
+                            ["What are the latest financial results for FAB?", "Show me information on FAB's ESG initiatives.", "Details on non-trading investment securities as of September 30, 2024?"]
                         ),
                         "role": "user",
                     }
@@ -32,12 +32,12 @@ class ChatUser(HttpUser):
             "/chat",
             json={
                 "messages": [
-                    {"content": "Best shoe for hiking?", "role": "user"},
+                    {"content": "What are the latest financial results for FAB?", "role": "user"},
                     {
-                        "content": "For the best shoe for hiking, I recommend the Trailblaze Steel-Blue Hiking Shoes.",
+                        "content": "FAB's latest financial results indicate a significant increase in net profit, driven by strong revenue growth and effective cost management.",
                         "role": "assistant",
                     },
-                    {"content": "any other options?", "role": "user"},
+                    {"content": "Can you provide more details on revenue growth?", "role": "user"},
                 ],
                 "context": {
                     "overrides": {"use_advanced_flow": True, "top": 3, "retrieval_mode": "hybrid", "temperature": 0.3}
