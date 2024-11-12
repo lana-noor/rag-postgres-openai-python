@@ -62,8 +62,8 @@ def mock_session_env(monkeypatch_session):
         monkeypatch_session.setenv("OPENAI_EMBED_HOST", "azure")
         monkeypatch_session.setenv("AZURE_OPENAI_ENDPOINT", "https://api.openai.com")
         monkeypatch_session.setenv("AZURE_OPENAI_VERSION", "2024-03-01-preview")
-        monkeypatch_session.setenv("AZURE_OPENAI_CHAT_DEPLOYMENT", "gpt-4o-mini")
-        monkeypatch_session.setenv("AZURE_OPENAI_CHAT_MODEL", "gpt-4o-mini")
+        monkeypatch_session.setenv("AZURE_OPENAI_CHAT_DEPLOYMENT", "gpt-4o")
+        monkeypatch_session.setenv("AZURE_OPENAI_CHAT_MODEL", "gpt-4o")
         monkeypatch_session.setenv("AZURE_OPENAI_EMBED_DEPLOYMENT", "text-embedding-ada-002")
         monkeypatch_session.setenv("AZURE_OPENAI_EMBED_MODEL", "text-embedding-ada-002")
         monkeypatch_session.setenv("AZURE_OPENAI_EMBED_DIMENSIONS", "1536")
@@ -171,7 +171,7 @@ def mock_openai_chatcompletion(monkeypatch_session):
     class AsyncChatCompletionIterator:
         def __init__(self, answer: str):
             chunk_id = "test-id"
-            model = "gpt-4o-mini"
+            model = "gpt-4o"
             self.responses = [
                 {"object": "chat.completion.chunk", "choices": [], "id": chunk_id, "model": model, "created": 1},
                 {

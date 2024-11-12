@@ -6,10 +6,10 @@ from fastapi_app.dependencies import common_parameters, get_azure_credential
 @pytest.mark.asyncio
 async def test_get_common_parameters(mock_session_env):
     result = await common_parameters()
-    assert result.openai_chat_model == "gpt-4o-mini"
+    assert result.openai_chat_model == "gpt-4o"
     assert result.openai_embed_model == "text-embedding-ada-002"
     assert result.openai_embed_dimensions == 1536
-    assert result.openai_chat_deployment == "gpt-4o-mini"
+    assert result.openai_chat_deployment == "gpt-4o"
     assert result.openai_embed_deployment == "text-embedding-ada-002"
 
 

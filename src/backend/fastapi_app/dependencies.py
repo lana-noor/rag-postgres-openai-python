@@ -57,8 +57,8 @@ async def common_parameters():
         openai_embed_dimensions = int(os.getenv("OPENAICOM_EMBED_DIMENSIONS", 1536))
         embedding_column = os.getenv("OPENAICOM_EMBEDDING_COLUMN") or "embedding_ada002"
     if OPENAI_CHAT_HOST == "azure":
-        openai_chat_deployment = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT") or "gpt-4o-mini"
-        openai_chat_model = os.getenv("AZURE_OPENAI_CHAT_MODEL") or "gpt-4o-mini"
+        openai_chat_deployment = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT") or "gpt-4o"
+        openai_chat_model = os.getenv("AZURE_OPENAI_CHAT_MODEL") or "gpt-4o"
     elif OPENAI_CHAT_HOST == "ollama":
         openai_chat_deployment = None
         openai_chat_model = os.getenv("OLLAMA_CHAT_MODEL") or "phi3:3.8b"
